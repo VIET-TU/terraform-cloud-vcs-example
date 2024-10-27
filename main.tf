@@ -15,6 +15,6 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "ansible_server" {
   ami           = data.aws_ami.ami.id
-  instance_type = "t2.micro"
+  instance_type = "t2.small" // t2.micro -> t2.small
   subnet_id = "subnet-0bfee4d2c2038dd7c"
 }
